@@ -1,3 +1,4 @@
+#Proyecto 3 Fernando Zamora y Mikael Araya Seccíon 1
 print("Arica y Parinacota,15 \n Tarapacá,1 \n Antofagasta,2 \n Atacama,3 \n Coquimbo,4 \n Valparaíso,5 \n Metropolitana,13 \n O’Higgins,6 \n Maule,7 \n Ñuble,16 \n Biobío,8 \n Araucanía,9 \n Los Ríos,14 \n Los Lagos,10 \n Aysén,11 \n Magallanes,12")
 region=input("Ingrese la región o el codigo a evaluar: ")
 import matplotlib.pyplot as plt
