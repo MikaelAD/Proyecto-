@@ -24,7 +24,7 @@ Raysen= datos[datos.Region=="Aysén"]
 Rmagallanes= datos[datos.Region=="Magallanes"]
 #se definen variables separadas por Region
 
-flag=False#se crea una variable falsa para ingresar al while
+flag=False #se crea una variable falsa para ingresar al while
 while flag==False:
 
     if region == "Arica y Parinacota" or region == "15":
