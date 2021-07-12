@@ -3,4 +3,21 @@ region=input("Ingrese la región o el codigo a evaluar: ")
 import matplotlib.pyplot as plt
 import pandas as pd
 import numpy as np
-as
+
+datos= pd.read_csv("UCI_std.csv",index_col=1)
+Raricayparinacota= datos[datos.Region=="Arica y Parinacota"]
+Rtarapaca= datos[datos.Region=="Tarapacá"]
+Rantofagasta= datos[datos.Region=="Antofagasta"]
+Ratacama= datos[datos.Region=="Atacama"]
+Rcoquimbo= datos[datos.Region=="Coquimbo"]
+Rvalparaiso= datos[datos.Region=="Valparaíso"]
+Rmetropolitana= datos[datos.Region=="Metropolitana"]
+Rohiggins= datos[datos.Region=="O’Higgins"]
+Rmaule= datos[datos.Region=="Maule"]
+Rñuble= datos[datos.Region=="Ñuble"]
+Rbiobio= datos[datos.Region=="Biobío"]
+Raraucania= datos[datos.Region=="Araucanía"]
+Rlosrios= datos[datos.Region=="Los Ríos"]
+Rloslagos= datos[datos.Region=="Los Lagos"]
+Raysen= datos[datos.Region=="Aysén"]
+Rmagallanes= datos[datos.Region=="Magallanes"]
