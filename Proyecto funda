@@ -27,10 +27,10 @@ Rmagallanes= datos[datos.Region=="Magallanes"]
 flag=False #se crea una variable falsa para ingresar al while
 while flag==False:
 
-    if region == "Arica y Parinacota" or region == "15":
+    if region == "Arica y Parinacota" or region == "15": #Por cada región se crea una variante para continuar con el codigo segun la región ingresada
         print(Raricayparinacota.iloc[-14:]) #se muestran las ultimas 14 filas de cada región
         flag=True #se declara la variable como verdadera para salir del ciclo
-    elif region == "Tarapacá" or region == "1":
+    elif region == "Tarapacá" or region == "1": #Si la variante anterior no continuó se sigue con cada elif
         print(Rtarapaca.iloc[-14:])
         flag=True
     elif region == "Antofagasta" or region == "2":
@@ -76,4 +76,4 @@ while flag==False:
         print(Rmagallanes.iloc[-14:])
         flag=True
     else:
-        input("Ingrese una región o un codigo valido: ")
+        input("Ingrese una región o un codigo valido: ") #Si no se ingresa el nombre o codigo valido, se pide ingresar uno nuevamente
