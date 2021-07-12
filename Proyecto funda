@@ -1,5 +1,3 @@
-#Proyecto nº3 Fernando Zamora y Mikael Araya sección 1
-
 print("Arica y Parinacota,15 \n Tarapacá,1 \n Antofagasta,2 \n Atacama,3 \n Coquimbo,4 \n Valparaíso,5 \n Metropolitana,13 \n O’Higgins,6 \n Maule,7 \n Ñuble,16 \n Biobío,8 \n Araucanía,9 \n Los Ríos,14 \n Los Lagos,10 \n Aysén,11 \n Magallanes,12")
 region=input("Ingrese la región o el codigo a evaluar: ")
 import matplotlib.pyplot as plt
@@ -25,6 +23,24 @@ Rloslagos= datos[datos.Region=="Los Lagos"]
 Raysen= datos[datos.Region=="Aysén"]
 Rmagallanes= datos[datos.Region=="Magallanes"]
 #se definen variables separadas por Region
+
+datos1=[] #Se crea una lista vacia para usarla mas tarde
+with open("UCI_T.csv", "r") as archivo: #Se abre el archivo como la variable "archivo"
+    lineas=archivo.read().splitlines() #se separa el archivo por lineas
+    for l in lineas:
+        linea=l.split(",") #Se separan los datos en listas
+        datos1.append([(linea[3]), (linea[4])]) #Se toman las columnas 3 y 4 en este caso siendo fecha y numero de casos
+x=[] #Se crea una lista vacia para usarla mas tarde
+y=[] #Se crea una lista vacia para usarla mas tarde
+for elem in (datos1):
+    x.append(elem[0]) #Se toman los datos de fecha para x en el grafico
+    y.append(elem[1]) #Se toman los datos de numero de casos para y en el grafico
+
+plt.plot(x,y, marker="o") #Se pasan los datos anteriores para denominar x e y
+plt.xlabel("fecha") #Se da nombre a x en el grafico
+plt.ylabel("numero") #Se da nombre a y en el grafico
+plt.title("Casos por dia") #Se da un Titulo al grafico en general
+plt.show() #Se muestra el grafico al usuario
 
 flag=False #se crea una variable falsa para ingresar al while
 while flag==False:
