@@ -21,3 +21,4 @@ Rlosrios= datos[datos.Region=="Los Ríos"]
 Rloslagos= datos[datos.Region=="Los Lagos"]
 Raysen= datos[datos.Region=="Aysén"]
 Rmagallanes= datos[datos.Region=="Magallanes"]
+
