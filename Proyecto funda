@@ -3,6 +3,7 @@ region=input("Ingrese la región o el codigo a evaluar: ")
 import matplotlib.pyplot as plt
 import pandas as pd
 import numpy as np
+#Se importan todos las librerias
 
 datos= pd.read_csv("UCI_std.csv",index_col=1)
 Raricayparinacota= datos[datos.Region=="Arica y Parinacota"]
@@ -21,4 +22,58 @@ Rlosrios= datos[datos.Region=="Los Ríos"]
 Rloslagos= datos[datos.Region=="Los Lagos"]
 Raysen= datos[datos.Region=="Aysén"]
 Rmagallanes= datos[datos.Region=="Magallanes"]
+#se definen variables separadas por Region
 
+flag=False#se crea una variable falsa para ingresar al while
+while flag==False:
+
+    if region == "Arica y Parinacota" or region == "15":
+        print(Raricayparinacota.iloc[-14:]) #se muestran las ultimas 14 filas de cada región
+        flag=True #se declara la variable como verdadera para salir del ciclo
+    elif region == "Tarapacá" or region == "1":
+        print(Rtarapaca.iloc[-14:])
+        flag=True
+    elif region == "Antofagasta" or region == "2":
+        print(Rantofagasta.iloc[-14:])
+        flag=True
+    elif region == "Atacama" or region == "3":
+        print(Ratacama.iloc[-14:])
+        flag=True
+    elif region == "Coquimbo" or region == "4":
+        print(Rcoquimbo.iloc[-14:])
+        flag=True
+    elif region == "Valparaíso" or region == "5":
+        print(Rvalparaiso.iloc[-14:])
+        flag=True
+    elif region == "Metropolitana" or region == "13":
+        print(Rmetropolitana.iloc[-14:])
+        flag=True
+    elif region == "O’Higgins" or region == "6":
+        print(Rohiggins.iloc[-14:])
+        flag=True
+    elif region == "Maule" or region == "7":
+        print(Rmaule.iloc[-14:])
+        flag=True
+    elif region == "Ñuble" or region == "16":
+        print(Rñuble.iloc[-14:])
+        flag=True
+    elif region == "Biobío" or region == "8":
+        print(Rbiobio.iloc[-14:])
+        flag=True
+    elif region == "Araucanía" or region == "9":
+        print(Raraucania.iloc[-14:])
+        flag=True
+    elif region == "Los Ríos" or region == "14":
+        print(Rlosrios.iloc[-14:])
+        flag=True
+    elif region == "Los Lagos" or region == "10":
+        print(Rloslagos.iloc[-14:])
+        flag=True
+    elif region == "Aysén" or region == "11":
+        print(Raysen.iloc[-14:])
+        flag=True
+    elif region == "Magallanes" or region == "12":
+        print(Rmagallanes.iloc[-14:])
+        flag=True
+    else:
+        input("Ingrese una región o un codigo valido: ")
