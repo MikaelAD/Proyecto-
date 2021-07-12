@@ -3,3 +3,4 @@ region=input("Ingrese la región o el codigo a evaluar: ")
 import matplotlib.pyplot as plt
 import pandas as pd
 import numpy as np
+as
